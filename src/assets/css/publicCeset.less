@@ -1,0 +1,319 @@
+//todo 变量===start
+@px_12:12px;
+@px_14:14px;
+@px_16:16px;
+@px_18:18px;
+@_0_7:0.7;
+
+//顏色
+@cor-f38431:#f38431;
+@themeColor:@cor-f38431;
+
+//todo 方法===statr
+//字体大小
+.fontSize(@index:@px_14){
+  font-size: @index;
+}
+
+//todo 样式实例===start
+.ThemeColorFun(@themeColor:@themeColor){
+  .HomeXbutton{
+    width: 80% !important;
+    border: none !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    background-color: @themeColor !important;
+    color: #fff !important;
+    margin-top: 40px !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.09) !important;
+    margin-bottom: 100px !important;
+    &:active {
+      border-color: @themeColor*0.9 !important;
+      background-color: @themeColor*0.9 !important;
+    }
+    &:after{
+      border: none !important;
+    }
+  }
+  .loginModule{
+    .loginFlexbox{
+      .loginFlexboxTxt{
+        .fontSize();
+      }
+    }
+    .loginXbutton{
+      .HomeXbutton;
+    }
+    .loginXinput{
+      .weui-cells{
+        .weui-label{
+          color: @themeColor;
+        }
+      }
+    }
+    .loginXbutton2{
+      opacity: @_0_7;
+      margin-bottom: 20px !important;
+    }
+    .loginFlexbox2{
+      margin-top: 0;
+      .loginFlexboxTxt{
+        color: @themeColor;
+        text-align: right;
+        &.left{
+          text-align: left;
+          &:before{
+            width: 0;
+            background-color: transparent;
+          }
+          &:after{
+            width: 0;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    .loginXinput2{
+      .weui-cells{
+        background-color: transparent;
+        @borders:#fff;
+        border-bottom: 1px solid @borders;
+        color: @borders;
+        @borders2:rgba(255,255,255,0.7);
+        border-bottom: 1px solid @borders2;
+        &:before{
+          border: none;
+        }
+        &:after{
+          border: none;
+        }
+        .weui-label{
+          font-size: @px_18;
+          opacity: @_0_7;
+        }
+      }
+    }
+    .min_logo{
+      width: 80%;
+      margin: auto;
+      display: block;
+    }
+  }
+  .weui-label{
+    .fontSize();
+  }
+  .weui-input{
+    .weui-label;
+  }
+  .vux-label-desc{
+    .fontSize(@px_12);
+  }
+  .weui-cells{
+    .weui-label;
+  }
+  .HomeXbutton{
+    .fontSize(@px_16);
+  }
+  .layoutXHeaderRight_txt{
+    .weui-label;
+  }
+  .imagesUploadTxt{
+    .weui-label;
+  }
+  .orderCard{
+    .orderCardHeader{
+      .weui-label;
+      .left{
+        .iconfont{
+          color: @themeColor;
+        }
+      }
+    }
+    .orderCardContent{
+      .fontSize(@px_12);
+    }
+    .orderCardFooter{
+      .orderCardHeader;
+    }
+    .HomeXbutton{
+      margin: 0 !important;
+      width: auto !important;
+    }
+  }
+  .SelectType{
+    .SelectTypeCard{
+      .header{
+        .weui-label;
+      }
+    }
+    .bj{
+      &:before{
+        content: '';
+        background-color: @themeColor;
+      }
+    }
+  }
+  .OrderDetails{
+    .OrderDetails-timeline{
+      .vux-timeline-item-content{
+        h4{
+          color: @themeColor;
+        }
+        p{
+          color: @themeColor;
+        }
+      }
+      .vux-timeline-item-color{
+        background-color: @themeColor;
+      }
+    }
+    .footerBtns{
+      .tel{
+        border: 1px solid @themeColor;
+        color: @themeColor;
+      }
+    }
+  }
+  .wrapper{
+    .wrapperMain{
+      .menu{
+        span{
+          .weui-label;
+        }
+      }
+      .user{
+        background-color: @themeColor;
+      }
+      .collect{
+        .user;
+      }
+    }
+    .wcontent{
+      .list{
+        .weui-label;
+      }
+    }
+    .yj-collect{
+      .vux-circle{
+        svg{
+          path{
+            &:last-child{
+              stroke:@themeColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  .layout-header{
+    .layoutXHeaderBox{
+      .layoutXHeader{
+        background-color: @themeColor;
+      }
+      .layoutFlexbox{
+        color: @themeColor;
+      }
+    }
+  }
+  .imagesUpload {
+    .vux-flexbox{
+      .vux-flexbox-item{
+        .imagesUploadTxt{
+          span{
+            &.ok{
+              color: @themeColor;
+            }
+          }
+          &.text2{
+            color: @themeColor;
+          }
+        }
+        .weui-progress__inner-bar{
+          background-color: @themeColor;
+        }
+      }
+    }
+  }
+  .LayoutFooter{
+    .homeTabbar {
+      .homeTabbarItem{
+        .weui-tabbar__icon{
+          .weui-label;
+        }
+        &.weui-bar__item_on{
+          .weui-tabbar__icon{
+            .iconfont{
+              color: @themeColor;;
+            }
+          }
+          .weui-tabbar__label{
+            span{
+              color: @themeColor;;
+            }
+          }
+        }
+      }
+    }
+  }
+  .weui-btn_plain-primary-Theme{
+    color: @themeColor;
+    border: 1px solid @themeColor;
+  }
+  .ForgetPwdXbutton{
+    .HomeXbutton;
+  }
+  .registerXbutton{
+    .HomeXbutton;
+  }
+  .home{
+    .homeXSwitch{
+      .weui-cell__ft{
+        .weui-switch{
+          &:checked{
+            border-color: @themeColor;
+            background-color: @themeColor;
+          }
+        }
+      }
+    }
+  }
+  .Upload{
+    .homeXSwitch{
+      .home.homeXSwitch;
+    }
+  }
+  .popupEX{
+    .vux-flexbox{
+      .EnterBtn{
+        .fontSize();
+      }
+      .weui-search-bar__cancel-btn{
+        .EnterBtn;
+      }
+    }
+    .weui-cell{
+      .fontSize();
+    }
+  }
+}
+.newThemeColor(@type:@type,@themeName:app,@themeColor:@themeColor){
+  #app{
+    .mixin (off,@themeColor:@themeColor) {
+      .ThemeColorFun(@themeColor:@themeColor);
+    }
+    .mixin (on,@themeColor:@themeColor) {
+      &.@{themeName}{
+        .ThemeColorFun(@themeColor:@themeColor);
+      }
+    }
+    .mixin(@_,@themeColor:@themeColor){}
+    .mixin(@type);
+  }
+}
+
+//初始化主题
+.newThemeColor(off);
+//.newThemeColor(on,@themeName: theme-f0f ,@themeColor: #f0f);
+//.newThemeColor(on,@themeName: theme-91c33c ,@themeColor: #91c33c);
+//.newThemeColor(on,@themeName: theme-huise ,@themeColor: rgba(35,35,35,0.83));
+//.newThemeColor(on,@themeName: theme-672db5 ,@themeColor: #672db5);
